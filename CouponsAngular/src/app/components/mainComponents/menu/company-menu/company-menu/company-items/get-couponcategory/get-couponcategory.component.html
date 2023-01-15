@@ -1,0 +1,58 @@
+<table id="table">
+    <tr>
+        <td>
+            <div id="instructions" class="card-header">
+                Please choose a category
+            </div>
+
+            <div id="userFeedback">
+                {{userFeedback}}
+            </div>
+
+            <div id="getCouponCatForm">
+                <form [formGroup]="getCouponCatForm" (ngSubmit)="onSubmit()">
+                    <div id="getCouponCategoryDiv">
+                        <label for="category">Coupon category</label>
+                        <select id="getCouponCategoryInput" formControlName="category" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.category.errors }">
+                            <option value="beer">Beer</option>
+                            <option value="food">Food</option>
+                            <option value="vacation">Vacation</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="appliances">Appliances</option>
+                        </select>
+                        <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+                            <div *ngIf="f.category.errors.required">Category is required</div>
+                        </div>
+                    </div>
+                   <br>
+                    <button id="getCouponCatButton" type="submit" class="btn btn-primary mr-1">Show coupons</button>
+                </form>
+            </div>
+        </td>
+
+        <td>
+            <div id="listDisplay">
+                <table id=listTable *ngFor="let coupon of couponList">
+                    <tr> <b>Coupon id</b>: {{coupon.couponId}}</tr>
+                    <br>
+                    <tr> <b>Coupon title</b>: {{coupon.couponTitle}}</tr>
+                    <br>
+                    <tr> <b>Coupon amount</b>: {{coupon.couponAmount}}</tr>
+                    <br>
+                    <tr> <b>Coupon price</b>: {{coupon.couponPrice | currency:'ILS'}}</tr>
+                    <br>
+                    <tr> <b>Coupon description</b>: {{coupon.couponDescription}}</tr>
+                    <br>
+                    <tr> <b>Coupon expiration date</b>: {{coupon.couponExpirationDate}}</tr>
+                    <br>
+                    <tr> <b>Coupon company id</b>: {{coupon.couponCompanyId}}</tr>
+                    <br>
+                    <tr> <b>Coupon category id</b>: {{coupon.couponCategoryId}}</tr>
+                    <br>
+                    <tr><img id="couponImg" src="/assets/CouponImages/{{coupon.couponImageFile}}.jpg"/></tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

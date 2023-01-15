@@ -1,0 +1,43 @@
+
+#table
+{
+    width: 50%;
+}
+
+#title
+{
+    text-align: center;
+    height: 47px;
+    color: rgb(2, 117, 216); 
+    text-decoration: underline;
+    font-size: 27px;  
+}
+
+#instructions
+{
+    text-align: center;
+    height: 50px;
+    font-size: 18px;
+    color: rgb(2, 117, 216);   
+    text-decoration: underline; 
+    font-style: italic;
+}
+
+#loginFailed
+{
+    text-align: center;
+    color: rgb(196, 17, 17);
+    height: 30px;
+    font-size: 18px; 
+}
+
+#loginForm
+{
+    color: rgb(2, 117, 216);  
+}
+
+#loginButton
+{
+    color: rgb(255, 255, 255); 
+}
+

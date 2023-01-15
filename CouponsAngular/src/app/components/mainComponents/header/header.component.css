@@ -1,0 +1,48 @@
+
+#headerMainContainer
+{
+    
+    padding-right: 3px;
+
+}
+
+#banner
+{
+    width: 250px;
+}
+
+
+#dateTime
+{
+    color: rgb(255, 255, 255);
+    text-align: bottom;  
+    font-size: 15px;
+    width: 180px;
+}
+
+#headerText
+{   
+    width: 630px;
+    font-size: 46px;
+    font: italic;
+    color: rgb(255, 255, 255); 
+    text-align: left;  
+}
+
+#loginIcon
+{
+    color: rgb(255, 255, 255);
+    font-style: oblique;
+    text-decoration: underline;
+    height: 100px;
+}
+
+#homeIcon
+{
+    text-align: center;
+    width: 130px;
+    color: rgb(255, 255, 255);
+    font-style: oblique;
+    text-decoration: underline;
+    height: 100px;
+}

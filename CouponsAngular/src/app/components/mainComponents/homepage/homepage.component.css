@@ -1,0 +1,21 @@
+
+#mainText
+{
+    text-align: center;
+    height: 140px;
+    color: rgb(2, 117, 216);  
+    font-size: 20px;
+}
+
+#homepageImg
+{   
+    height: 190px;
+    width: 600px;
+    
+}
+
+#picDiv
+{
+    text-align: center;
+    vertical-align: top;
+}

@@ -1,0 +1,27 @@
+<table id="table">
+    <tr id="mainTr">
+        <td>
+            <div id="title">
+                {{title}}
+            </div>
+
+            <div id="userFeedback">
+                {{userFeedback}}
+            </div>
+
+            <div id="listDisplay">
+                <table id=listTable *ngFor="let coupon of couponList">
+                    <tr> <b>Coupon title</b>: {{coupon.couponTitle}}</tr>
+                    <br>
+                    <tr> <b>Coupon price</b>: {{coupon.couponPrice | currency:'ILS'}}</tr>
+                    <br>
+                    <tr> <b>Coupon description</b>: {{coupon.couponDescription}}</tr>
+                    <br>
+                    <tr> <b>Coupon expiration date</b>: {{coupon.couponExpirationDate}}</tr>
+                    <br>
+                    <tr><img id="couponImg" src="/assets/CouponImages/{{coupon.couponImageFile}}.jpg" /></tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

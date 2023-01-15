@@ -1,0 +1,47 @@
+<div id="mainContianer" class="container-fluid d-flex justify-content-center">
+<table id="table" >
+    <tr>
+        <td>
+            <div id="title">
+                {{title}}
+            </div>
+
+            <div id="instructions" class="card-header">
+                Please enter your email and password
+            </div>
+
+            <div id="loginFailed">
+                {{loginFailed}}
+            </div>
+
+           
+            <form id="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div>
+                    <label for="email">Email: </label>
+                    <input id="loginEmailInput" type="text" placeholder="Required field" formControlName="email"
+                        class="form-control input-sm" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.pattern">Email must be a valid email address</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div id="loginPasswordDiv">
+                    <label for="password">Password: </label>
+                    <input id="loginpasswordInput" type="text" placeholder="Required field" formControlName="password"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+                </div>
+                <br>
+                <div class="text-center">
+                <button id="loginButton" class="btn btn-primary mr-1" type="submit">Login</button>
+                </div>
+            </form>
+        </td>
+    </tr>
+</table>
+</div>

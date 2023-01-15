@@ -1,0 +1,125 @@
+<table id="table">
+    <tr>
+        <td>
+
+            <div id="instructions" class="card-header">
+                Please fill in the required boxes
+            </div>
+
+            <div id="userFeedback">
+                {{userFeedback}}
+            </div>
+
+      
+                <form id="updateCouponForm" [formGroup]="updateCouponForm" (ngSubmit)="onSubmit()">
+                    <div id="updateCompIdeDiv" class="col-xs-4">
+                        <label for="id">Coupon id: </label>
+                        <input id="addCouponTitleInput" type="text" placeholder="Required field" formControlName="id"
+                            class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
+                        <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                            <div *ngIf="f.id.errors.required">Id is required</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="updateCompTitleDiv">
+                        <label for="title">Coupon title: </label>
+                        <input id="updateCouponTitleInput" type="text" formControlName="title" class="form-control" />
+
+                    </div>
+
+                    <br>
+
+                    <div id="updateCouponCategoryDiv">
+                        <label for="category">Coupon category</label>
+                        <select id="updateCouponCategoryInput" formControlName="category" class="form-control">
+                            <option value="beer">Beer</option>
+                            <option value="food">Food</option>
+                            <option value="vacation">Vacation</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="appliances">Appliances</option>
+                        </select>
+
+                    </div>
+
+                    <br>
+
+                    <div id="updateCouponAmountDiv">
+                        <label for="amount">Coupon amount: </label>
+                        <input id="updateCouponAmountInput" type="number" placeholder="Required field" formControlName="amount"
+                            class="form-control" [ngClass]="{ 'is-invalid': submitted && f.amount.errors }" />
+                        <div *ngIf="submitted && f.amount.errors" class="invalid-feedback">
+                            <div *ngIf="f.amount.errors.required">Amount is required</div>
+                        </div>
+                    </div>
+    
+                    <br>
+    
+                    <div id="updateCouponPriceDiv">
+                        <label for="price">Coupon price: </label>
+                        <input id="updateCouponPriceInput" type="number" placeholder="Required field" formControlName="price"
+                            class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                        <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                            <div *ngIf="f.price.errors.required">Price is required</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="updateCouponDescriptionDiv">
+                        <label for="description">Coupon description: </label>
+                        <input id="updateCouponDescriptioInput" type="text" formControlName="description"
+                            class="form-control" />
+
+                    </div>
+
+                    <br>
+
+                    <div id="updateCouponDateDiv">
+                        <label for="date">Coupon expiration date: </label>
+                        <input id="updateCouponDateInput" type="date" formControlName="date" class="form-control" />
+
+                    </div>
+
+                    <br>
+
+                    <div id="updateCouponImgDiv">
+                        <label for="img">Image URL: </label>
+                        <input id="updateCouponImgInput" type="text" formControlName="img" class="form-control" />
+
+                    </div>
+
+                    <br>
+                    <button id="updateCouponButton" type="submit" class="btn btn-primary mr-1">Update coupon</button>
+                </form>
+            
+        </td>
+
+        <td>
+            <div id="listDisplay">
+                <table id=listTable *ngFor="let coupon of couponList">
+
+                    <tr> <b>Coupon id</b>: {{coupon.couponId}}</tr>
+                    <br>
+                    <tr> <b>Coupon title</b>: {{coupon.couponTitle}}</tr>
+                    <br>
+                    <tr> <b>Coupon amount</b>: {{coupon.couponAmount}}</tr>
+                    <br>
+                    <tr> <b>Coupon price</b>: {{coupon.couponPrice | currency:'ILS'}}</tr>
+                    <br>
+                    <tr> <b>Coupon description</b>: {{coupon.couponDescription}}</tr>
+                    <br>
+                    <tr> <b>Coupon expiration date</b>: {{coupon.couponExpirationDate}}</tr>
+                    <br>
+                    <tr> <b>Coupon company id</b>: {{coupon.couponCompanyId}}</tr>
+                    <br>
+                    <tr> <b>Coupon category id</b>: {{coupon.couponCategoryId}}</tr>
+                    <br>
+                    <tr><img id="couponImg" src="/assets/CouponImages/{{coupon.couponImageFile}}.jpg"/></tr>
+
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

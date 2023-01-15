@@ -1,0 +1,67 @@
+<table id="table">
+        <tr>
+            <td>
+    
+                <div id="title">
+                    {{title}}
+                </div>
+    
+    
+                <div id="instructions" class="card-header">
+                    Please fill in the required boxes
+                </div>
+    
+                <div id="userFeedback">
+                    {{userFeedback}}
+                </div>
+    
+                <form id="addCustForm" [formGroup]="addCustForm" (ngSubmit)="onSubmit()">
+                    <div id="addCustEmailDiv">
+                        <label for="email">Email: </label>
+                        <input id="addCustEmailInput" type="text" placeholder="Required field" formControlName="email"
+                            class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.pattern">Email must be a valid email address</div>
+                        </div>
+                    </div>
+    
+                    <br>
+    
+                    <div id="addCustPasswordDiv">
+                        <label for="password">Password: </label>
+                        <input id="addCustPasswordInput" type="text" placeholder="Required field" formControlName="password"
+                            class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                        </div>
+                    </div>
+    
+                    <br>
+    
+                    <div id="addCustNameDiv">
+                        <label for="custName">Customer name: </label>
+                        <input id="addCompNameInput" type="text" placeholder="Required field" formControlName="name"
+                            class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required">name is required</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="addCustLastNameDiv">
+                            <label for="custLastName">Customer last name: </label>
+                            <input id="addCompLastNameInput" type="text" placeholder="Required field" formControlName="lname"
+                                class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lname.errors }" />
+                            <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+                                <div *ngIf="f.lname.errors.required">Last name is required</div>
+                            </div>
+                        </div>
+                        <br>
+                    <button id="addCustButton" type="submit" class="btn btn-primary mr-1">Add customer</button>
+                </form>
+    
+            </td>
+        </tr>
+    </table>

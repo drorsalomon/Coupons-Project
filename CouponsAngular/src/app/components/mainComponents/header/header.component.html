@@ -1,0 +1,30 @@
+<div id="headerMainContainer" class="row align-items-center">
+
+
+    <div id="banner" class="col-md-2-auto ">
+        <app-banner></app-banner>
+    </div>
+
+
+    <div id="dateTime" class="col-2-auto">
+        {{welcome}}{{userEmail}}
+        <br>
+        <br>
+        {{currentTime | date : 'medium'}}
+    </div>
+
+    <div id="headerText" class="col-5-auto">
+        {{headerText}}
+    </div>
+
+    <div id="homeIcon" class="col-1-auto">
+        <app-home-icon></app-home-icon>
+    </div>
+
+    <div id="loginIcon" class="col-1-auto">
+        <router-outlet name="headerOutlet"></router-outlet>
+    </div>
+
+
+
+</div>

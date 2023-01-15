@@ -1,0 +1,51 @@
+#table
+{
+    width: 100%;
+}
+
+#instructions
+{
+    width: 355px;
+    height: 80px;
+    font-size: 18px;
+    color: rgb(2, 117, 216);    
+    text-decoration: underline; 
+    font-style: italic;
+    margin-left: 150px;
+}
+
+#userFeedback
+{   
+    width: fit-content;
+    height: 40px;
+    width: 355px;
+    text-align: center; 
+    font-size: 18px;   
+    margin-left: 150px;
+}
+
+#deleteCompForm
+{
+    width: fit-content;
+    text-align: center;
+    width: 355px;
+    color: rgb(2, 117, 216); 
+    height: 233px; 
+    overflow-y: auto;
+    margin-left: 150px;
+}
+
+#listDisplay
+{
+    width: 530px;
+    height: 240px;
+    font-size: 18px;
+    color: rgb(2, 117, 216);  
+    overflow-y: auto;   
+    margin-left: 110px;
+}
+
+#deleteCompButton
+{
+    color: rgb(255, 255, 255);   
+}

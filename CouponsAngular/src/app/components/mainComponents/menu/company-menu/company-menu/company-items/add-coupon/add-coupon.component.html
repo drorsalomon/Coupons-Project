@@ -1,0 +1,107 @@
+<table id="table">
+    <tr>
+        <td>
+
+            <div id="title">
+                {{title}}
+            </div>
+
+
+            <div id="instructions" class="card-header">
+                Please fill in the required boxes
+            </div>
+
+            <div id="userFeedback">
+                {{userFeedback}}
+            </div>
+       
+      
+            <form id="addCouponForm" [formGroup]="addCouponForm" (ngSubmit)="onSubmit()">
+                <div id="addCompTitleDiv">
+                    <label for="title">Coupon title: </label>
+                    <input id="addCouponTitleInput" type="text" placeholder="Required field" formControlName="title"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" />
+                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                        <div *ngIf="f.title.errors.required">Title is required</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div id="addCouponCategoryDiv">
+                    <label for="category">Coupon category</label>
+                    <select id="addCouponCategoryInput" formControlName="category"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.category.errors }">
+                        <option value="beer">Beer</option>
+                        <option value="food">Food</option>
+                        <option value="vacation">Vacation</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="appliances">Appliances</option>
+                    </select>
+                    <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+                        <div *ngIf="f.category.errors.required">Category is required</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div id="addCouponAmountDiv">
+                    <label for="amount">Coupon amount: </label>
+                    <input id="addCouponAmountInput" type="number" placeholder="Required field" formControlName="amount"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.amount.errors }" />
+                    <div *ngIf="submitted && f.amount.errors" class="invalid-feedback">
+                        <div *ngIf="f.amount.errors.required">Amount is required</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div id="addCouponPriceDiv">
+                    <label for="price">Coupon price: </label>
+                    <input id="addCouponPriceInput" type="number" placeholder="Required field" formControlName="price"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                    <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                        <div *ngIf="f.price.errors.required">Price is required</div>
+                    </div>
+                </div>
+           
+                <br>
+           
+                <div id="addCouponDescriptionDiv">
+                    <label for="description">Coupon description: </label>
+                    <input id="addCouponDescriptioInput" type="text" placeholder="Required field" formControlName="description"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                    <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                        <div *ngIf="f.description.errors.required">Description is required</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div id="addCouponDateDiv">
+                    <label for="date">Coupon expiration date: </label>
+                    <input id="addCouponDateInput" type="date" placeholder="Required field" formControlName="date"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.date.errors }" />
+                    <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                        <div *ngIf="f.date.errors.required">Expiration date is required</div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div id="addCouponImgDiv">
+                    <label for="img">Image URL: </label>
+                    <input id="addCouponImgInput" type="text" placeholder="Required field" formControlName="img"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.img.errors }" />
+                    <div *ngIf="submitted && f.img.errors" class="invalid-feedback">
+                        <div *ngIf="f.img.errors.required">Image path is required</div>
+                    </div>
+                </div>
+           
+                <br>
+                <button id="addCouponButton" type="submit" class="btn btn-primary mr-1">Create coupon</button>
+            </form>
+
+        </td>
+    </tr>
+</table>

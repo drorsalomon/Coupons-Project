@@ -1,0 +1,87 @@
+
+#table
+{
+    width: 100%;
+}
+
+#title
+{
+    text-align: center;
+    color: rgb(2, 117, 216); 
+    text-decoration: underline;
+    font-size: 21px;
+    height: 50px;  
+}
+
+#instructions
+{
+    text-align: center;
+    height: 50px;
+    font-size: 18px;
+    color: rgb(2, 117, 216);    
+    text-decoration: underline; 
+    font-style: italic;
+}
+
+#userFeedback
+{
+    text-align: center;
+    height: 40px;
+    font-size: 18px; 
+}
+
+#addCouponForm
+{
+    text-align: center;
+    color: rgb(2, 117, 216); 
+    height: 140px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    margin-bottom: 80px;
+    margin-left: 95px;
+}
+
+#addCouponButton
+{
+    color: rgb(255, 255, 255);
+    margin-left: 25px;
+    margin-top: 33px;
+}
+
+#addCompTitleDiv
+{
+    margin-left: 20px;
+    margin-bottom: 35px;
+}
+
+#addCouponCategoryDiv
+{
+    margin-left: 20px;
+}
+
+#addCouponAmountDiv
+{
+    margin-left: 20px;
+}
+
+#addCouponPriceDiv
+{
+    margin-left: 20px;
+}
+
+#addCouponDescriptionDiv
+{
+    margin-left: 20px;
+}
+
+#addCouponDateDiv
+{
+    margin-left: 20px;
+    
+}
+
+#addCouponImgDiv
+{
+    margin-left: 20px;
+}

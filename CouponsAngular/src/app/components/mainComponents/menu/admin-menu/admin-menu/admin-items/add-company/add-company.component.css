@@ -1,0 +1,65 @@
+
+#table
+{
+    width: 65%;
+    margin-left: 220px;
+}
+
+#title
+{
+    text-align: center;
+    color: rgb(2, 117, 216); 
+    text-decoration: underline;
+    font-size: 21px;
+    height: 55px;
+}
+
+#instructions
+{
+    text-align: center;
+    height: 62px;
+    font-size: 18px;
+    color: rgb(2, 117, 216);     
+    text-decoration: underline; 
+    font-style: italic;
+}
+
+#userFeedback
+{
+    text-align: center;
+    height: 35px;
+    font-size: 18px; 
+}
+
+
+#addCompForm
+{
+    text-align: center;
+    color: rgb(2, 117, 216);  
+    height: 200px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    margin-left: 30px;
+}
+
+#addCompButton
+{
+    color: rgb(255, 255, 255); 
+    margin-left: 300px;
+}
+
+#addCompEmailDiv
+{
+    margin-left: 20px;
+}
+
+#addCompPasswordDiv
+{
+    margin-left: 20px;
+}
+
+#addCompNameDiv
+{
+    margin-left: 20px;
+}

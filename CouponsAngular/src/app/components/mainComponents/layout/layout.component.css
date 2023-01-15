@@ -1,0 +1,32 @@
+
+#headerContainer
+{
+    padding-left: -1px;
+    padding-right: -1px;
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
+#midtable
+{
+    
+   
+}
+
+#mainMenu
+{
+    width: 100px;
+    
+}
+
+#view
+{   
+   background-color: rgb(235, 235, 235);
+}
+
+#footerContainer
+{
+    height: 72px;
+    text-align: center;
+    padding-top: 25px;
+}

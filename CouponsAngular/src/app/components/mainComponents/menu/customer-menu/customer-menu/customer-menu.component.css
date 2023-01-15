@@ -1,0 +1,23 @@
+
+#customerList
+{
+    height: 30px;
+    font-size: 19px;
+}
+
+
+#listHeadline
+{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 50px;
+}
+
+.nav>li>a:focus
+{
+    background-color: rgb(32, 36, 245);
+}
+.nav>li>a:hover 
+{
+    background-color: rgb(32, 36, 245);
+}

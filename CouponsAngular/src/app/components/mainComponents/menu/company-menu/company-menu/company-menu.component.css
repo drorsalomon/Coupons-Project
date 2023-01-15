@@ -1,0 +1,27 @@
+
+#companyList
+{
+    height: 30px;
+    color: white;
+    font-size: 14.5px;
+}
+
+
+#listHeadline
+{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 35px;
+}
+
+.nav>li>a:focus
+{
+    background-color: rgb(32, 36, 245);
+}
+.nav>li>a:hover 
+{
+    background-color: rgb(32, 36, 245);
+}
+
+
+

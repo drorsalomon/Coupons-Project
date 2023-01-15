@@ -1,0 +1,63 @@
+#table
+{
+    width: 100%;
+}
+
+#instructions
+{
+    width: 235px;
+    height: 50px;
+    font-size: 18px;
+    color: rgb(2, 117, 216);    
+    text-decoration: underline; 
+    font-style: italic;
+    margin-left: 205px;
+}
+
+#userFeedback
+{   
+    width: fit-content;
+    width: 355px;
+    height: 70px;
+    text-align: center; 
+    font-size: 18px;  
+    margin-left: 150px;
+}
+
+#getCouponPriceForm
+{
+    width: 355px;
+    height: 233px;
+    text-align: center;
+    color: rgb(2, 117, 216);  
+    overflow-y: auto;
+    margin-left: 150px;
+}
+
+#listDisplay
+{
+    width: 530px;
+    height: 240px;
+    font-size: 18px;
+    color: rgb(2, 117, 216);  
+    overflow-y: scroll; 
+    margin-left: 110px;  
+}
+
+#couponImg
+{
+    height: 180px;
+    width: 300px;
+    border: 3px solid rgb(2, 117, 216);
+}
+
+#listTable
+{
+    border: 1px solid black;
+    width: fit-content;
+}
+
+#getCouponPriceButton
+{
+    color: rgb(255, 255, 255);   
+}

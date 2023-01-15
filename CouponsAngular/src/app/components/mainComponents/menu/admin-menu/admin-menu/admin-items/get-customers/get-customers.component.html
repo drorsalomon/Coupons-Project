@@ -1,0 +1,35 @@
+<table id="table">
+    <tr>
+        <td>
+            <div id="title">
+                {{title}}
+            </div>
+
+            <div id="userFeedback">
+                {{userFeedback}}
+            </div>
+
+            <div id="listDisplay">
+                <p id="listP" *ngFor="let customer of custList">
+                    ****************************************************************************************************************************************
+                    <br>
+                    <b>Customer id</b>: {{customer.customerId}}
+                    <br>
+                    <br>
+                    <b>Customer name</b>: {{customer.customerFirstName}}
+                    <br>
+                    <br>
+                    <b>Customer last name</b>: {{customer.customerLastName}}
+                    <br>
+                    <br>
+                    <b>Account detail</b>: {{customer.customerLoginId}}
+                    <br>
+                    <br>
+                    <b>Customer Coupons</b>: {{customer.jCustomerCoupons}}
+                    <br>
+                    ****************************************************************************************************************************************
+                </p>
+            </div>
+        </td>
+    </tr>
+</table>

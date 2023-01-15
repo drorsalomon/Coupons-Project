@@ -1,0 +1,32 @@
+<table id="table">
+    <tr>
+        <td>
+            <div id="title">
+                {{title}}
+            </div>
+
+            <div id="userFeedback">
+                {{userFeedback}}
+            </div>
+
+            <div id="listDisplay">
+                <p id="listP" *ngFor="let company of compList">
+                    ***********************************************************************************************************************************
+                    <br>
+                    <b>Company id</b>: {{company.companyId}}
+                    <br>
+                    <br>
+                    <b>Company name</b>: {{company.companyName}}
+                    <br>
+                    <br>
+                    <b>Account detail</b>: {{company.companyLoginId}}
+                    <br>
+                    <br>
+                    <b>Company Coupons</b>: {{company.jCompanyCoupons}}
+                    <br>
+                    ***********************************************************************************************************************************
+                </p>
+            </div>
+        </td>
+    </tr>
+</table>

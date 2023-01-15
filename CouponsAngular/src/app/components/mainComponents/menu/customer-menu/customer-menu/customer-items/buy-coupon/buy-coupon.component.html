@@ -1,0 +1,46 @@
+<table id="table">
+    <tr>
+        <td>
+            <div id="instructions" class="card-header">
+                Please enter the title of the<br> 
+                coupon you would like to purchase
+            </div>
+
+            <div id="userFeedback">
+                {{userFeedback}}
+            </div>
+
+            <div id="buyCouponForm">
+                <form [formGroup]="buyCouponForm" (ngSubmit)="onSubmit()">
+                    <label for="title">Coupon title: </label>
+                    <input id="buyCouponIdInput" type="text" placeholder="Required field" formControlName="title"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" />
+                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                        <div *ngIf="f.title.errors.required">Id is required</div>
+                    </div>
+                   <br>
+                   <br>
+                    <button id="buyCouponIdButton" type="submit" class="btn btn-primary mr-1">Buy coupon</button>
+                </form>
+            </div>
+        </td>
+
+        <td>
+            <div id="listDisplay">
+                <table id=listTable *ngFor="let coupon of couponList">
+                    <tr> <b>Coupon title</b>: {{coupon.couponTitle}}</tr>
+                    <br>
+                    <tr> <b>Coupon amount</b>: {{coupon.couponAmount}}</tr>
+                    <br>
+                    <tr> <b>Coupon price</b>: {{coupon.couponPrice | currency:'ILS'}}</tr>
+                    <br>
+                    <tr> <b>Coupon description</b>: {{coupon.couponDescription}}</tr>
+                    <br>
+                    <tr> <b>Coupon expiration date</b>: {{coupon.couponExpirationDate}}</tr>
+                    <br>
+                    <tr><img id="couponImg" src="/assets/CouponImages/{{coupon.couponImageFile}}.jpg"/></tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

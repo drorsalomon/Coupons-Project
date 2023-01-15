@@ -1,0 +1,31 @@
+#table
+{
+    width: 80%;
+    margin-left: 130px;
+}
+
+#title
+{
+    text-align: center;
+    height: 40px;
+    color: rgb(2, 117, 216);  
+    text-decoration: underline;
+    font-size: 27px;  
+}
+
+#userFeedback
+{   
+    height: 40px;
+    text-align: center; 
+    font-size: 18px;  
+}
+
+#listDisplay
+{
+    text-align: left;
+    height: 273px;
+    font-size: 18px;
+    color: rgb(2, 117, 216);  
+    overflow-y: auto;   
+    padding-top: 10px;
+}
